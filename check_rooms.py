@@ -10,7 +10,7 @@ URL = "https://online.maavaishnodevi.org/api/v1/eAccommodation/accomAvailability
 PAYLOAD = {
     "locationId": "3",
     "accomTypeId": "1",
-    "accomDate": "2026-11-09",
+    "accomDate": "2026-11-12",
     "noOfDays": "1",
 }
 
@@ -50,7 +50,7 @@ def check_rooms():
 def send_email(rooms):
     subject = "🚨 Vaishno Devi Room Available!"
 
-    body = "Rooms are available for 9 November 2026:\n\n"
+    body = "Rooms are available for 12 November 2026:\n\n"
 
     for room in rooms:
         body += (
@@ -78,7 +78,7 @@ def send_email(rooms):
 def send_telegram(rooms):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
 
-    message = "🚨 *VAISHNO DEVI ROOM AVAILABLE!*\n\n"
+    message = "🚨 *GCP VAISHNO DEVI ROOM AVAILABLE!*\n\n"
 
     for room in rooms:
         message += (
@@ -120,9 +120,9 @@ if __name__ == "__main__":
             )
 
         send_email(rooms)
-        print("Email sent.")
+        print("Email sent gcp.")
         
         send_telegram(rooms)
-        print("Telegram message sent.")
+        print("Telegram message sent gcp.")
     else:
-        print("\n❌ No rooms available.")
+        print("\n❌ No rooms available gcp.")
