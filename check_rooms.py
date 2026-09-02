@@ -10,7 +10,7 @@ URL = "https://online.maavaishnodevi.org/api/v1/eAccommodation/accomAvailability
 PAYLOAD = {
     "locationId": "3",
     "accomTypeId": "1",
-    "accomDate": "2026-11-12",
+    "accomDate": "2026-11-09",
     "noOfDays": "1",
 }
 
